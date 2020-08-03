@@ -11,8 +11,11 @@ server:
   port: 8083
 spring:
   profiles: dev
+debug: true
 ---
 server:
   port: 8084
 spring:
   profiles: produ
+
+
