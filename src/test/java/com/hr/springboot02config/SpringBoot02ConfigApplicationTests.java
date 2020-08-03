@@ -20,6 +20,9 @@ class SpringBoot02ConfigApplicationTests {
     Person01 person01;
 
     @Autowired
+    Person01 person02;
+
+    @Autowired
     ApplicationContext ioc;
 
     @Test
@@ -37,6 +40,11 @@ class SpringBoot02ConfigApplicationTests {
         boolean b = ioc.containsBean("helloService");
         //false 当在主配置类上加上@ImportResource(locations = {"classpath:beans.xml"})之后就是true
         System.out.println(b);
+    }
+
+    @Test
+    void testPerson02() {
+        System.out.println(person02);
     }
 
 }
