@@ -1,16 +1,18 @@
+
 server:
   port: 8081
-
-
-#person:
-#  last-name: zhangsan
-#  age: 18
-#  boss: false
-#  birth: 1993/03/23
-#  maps: {k1: v1,k2: v2}
-#  lists:
-#    - lisi
-#    - zhaoliu
-#  dog:
-#    name: 小狗
-#    age: 2
+# 激活了dev文档块
+spring:
+  profiles:
+    active: dev
+---
+#---是指定文档块, 可以用profiles指定每一个文档块是什么类型的
+server:
+  port: 8083
+spring:
+  profiles: dev
+---
+server:
+  port: 8084
+spring:
+  profiles: produ
